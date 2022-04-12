@@ -8,6 +8,13 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,26 +22,78 @@
   </style>
 </head>
 <body>
+  <div id="splitter">
+    <div id="left">
+      <p class="description">
+        Bill
+      </p>
+      <div id="bill-number">
+        <img src="images/icon-dollar.svg" alt="">
+        <p>0</p>
+      </div>
+    
+      <p class="description">
+        Select Tip %
+      </p>
+      
+      <div id="tip-grid">
+        <button class="tip-button">5%</button>
+        <button class="tip-button">10%</button>
+        <button class="tip-button">15%</button>
+        <button class="tip-button">20%</button>
+        <button class="tip-button">50%</button>
+        <button class="tip-button" id="custom-button">Custom</button>
+      </div>
+    
+      <p class="description">
+        Number of People
+      </p>
+      <div id="people-number">
+        <img src="images/icon-person.svg" alt="">
+        <p>0</p>
+      </div>
+    </div>
+    
+    <div id="right">
+      <div class="amount">
+        <div>
+          <p class="amount-text">
+            Tip Amount
+          </p>
+          <p class="person-text">
+            / person
+          </p>
+        </div>
+       
+        <p class="amount-number">
+          $0.00
+        </p>
+      </div>
+     
+      <div class="amount">
+        <div>
+          <p class="amount-text">
+            Total
+          </p>
+          <p class="person-text">
+            / person
+          </p>
+        </div>
+       
+        <p class="amount-number">
+          $0.00
+        </p>
+      </div>
+  
+      <button id="reset-button">
+        RESET
+      </button>
+    </div>
+  </div>
 
-  Bill
+ 
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+ 
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

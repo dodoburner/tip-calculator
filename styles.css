@@ -1,0 +1,116 @@
+body {
+  background-color:  hsl(185, 41%, 84%);
+  font-family: Space Mono;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: Space Mono;
+}
+
+#splitter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px ;
+}
+
+#right {
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  flex-direction: column;
+  padding: 35px 30px;
+  border-radius: 10px;
+  position: relative;
+  margin-left: 40px;
+}
+
+.amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+ 
+  
+}
+
+#reset-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: hsl(186, 14%, 43%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+
+.amount-number {
+  font-size: 40px;
+  color: hsl(172, 67%, 45%);
+}
+
+#bill-number, #people-number {
+  background-color: hsl(189, 41%, 97%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(185, 41%, 84%);
+  font-size: 24px;
+  padding: 4px 18px;
+}
+
+#bill-number {
+  margin-bottom: 30px;
+}
+
+#tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.tip-button {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  font-family: Space Mono;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#custom-button {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+}
+
+.description {
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 10px;
+}
+
+.amount-text {
+  color: white;
+  font-size: 16px;
+}
+
+.person-text {
+  color: hsl(186, 14%, 43%)
+}
+
+img {
+  height: 20px;
+  
+}
