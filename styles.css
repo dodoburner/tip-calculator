@@ -1,7 +1,17 @@
+html, body {
+height: 100%;
+}
+
 body {
   background-color:  hsl(185, 41%, 84%);
   font-family: Space Mono;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
 }
+
 
 p {
   margin: 0;
@@ -17,6 +27,7 @@ button {
   background-color: white;
   border-radius: 20px;
   padding: 30px ;
+  max-width: 800px; 
 }
 
 #right {
@@ -26,7 +37,7 @@ button {
   padding: 35px 30px;
   border-radius: 10px;
   position: relative;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 .amount {
@@ -50,7 +61,10 @@ button {
   padding: 8px;
   cursor: pointer;
   font-size: 16px;
-  
+}
+
+#reset-button:hover {
+  background-color: hsl(172, 67%, 45%);
 }
 
 .amount-number {
@@ -58,19 +72,6 @@ button {
   color: hsl(172, 67%, 45%);
 }
 
-#bill-number, #people-number {
-  background-color: hsl(189, 41%, 97%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: hsl(185, 41%, 84%);
-  font-size: 24px;
-  padding: 4px 18px;
-}
-
-#bill-number {
-  margin-bottom: 30px;
-}
 
 #tip-grid {
   display: grid;
@@ -89,11 +90,39 @@ button {
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
+  padding: 10px;
+}
+
+.tip-button:hover {
+  background-color:  hsl(172, 67%, 45%);
+  color:hsl(183, 100%, 15%) ;
 }
 
 #custom-button {
   background-color: hsl(189, 41%, 97%);
-  color: hsl(186, 14%, 43%);
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-family: Space Mono;
+  text-align: right;
+  font-size: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  
+}
+
+#custom-button::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+#custom-button:focus, #custom-button:hover {
+  outline-color: hsl(172, 67%, 45%);
+  outline-style: solid;
+  outline-width: medium;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+  
 }
 
 .description {
@@ -110,7 +139,64 @@ button {
   color: hsl(186, 14%, 43%)
 }
 
+#input-div1, #input-div2 {
+  position: relative;
+}
+
 img {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  bottom: 10px;
   height: 20px;
+}
+
+
+#bill-input, #people-input {
+  border: none;
+  text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  font-family: Space Mono;
+  font-size: 30px;
+  color: hsl(185, 41%, 84%);
+  width: calc(100% - 1em);
+  padding:4px 20px 0px;
+  cursor: pointer;
   
+}
+
+#bill-input {
+  margin-bottom: 30px;
+}
+
+#bill-input:focus, #people-input:focus, #bill-input:hover, #people-input:hover {
+ outline-color: hsl(172, 67%, 45%);
+ outline-style: solid;
+ outline-width: medium;
+ border-radius: 5px;
+ color:hsl(183, 100%, 15%) ;
+}
+
+::placeholder {
+  color: hsl(185, 41%, 84%);
+}
+
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+
+#cantbe {
+  display: flex;
+  justify-content: space-between;
+}
+
+#cantbe-text1, #cantbe-text2 {
+  color: red;
+  display: none;
+}
+
+.attribution {
+  position: fixed;
+  bottom:0;
 }
