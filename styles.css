@@ -4,7 +4,7 @@ height: 100%;
 
 body {
   background-color:  hsl(185, 41%, 84%);
-  font-family: Space Mono;
+  font-family: Space Mono, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +18,7 @@ p {
 }
 
 button {
-  font-family: Space Mono;
+  font-family: Space Mono, sans-serif;
 }
 
 #splitter {
