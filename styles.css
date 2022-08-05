@@ -1,17 +1,16 @@
-html, body {
-height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background-color:  hsl(185, 41%, 84%);
+  background-color: hsl(185, 41%, 84%);
   font-family: Space Mono, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
 }
-
 
 p {
   margin: 0;
@@ -26,8 +25,8 @@ button {
   grid-template-columns: 1fr 1fr;
   background-color: white;
   border-radius: 20px;
-  padding: 30px ;
-  max-width: 800px; 
+  padding: 30px;
+  max-width: 800px;
 }
 
 #right {
@@ -45,8 +44,6 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
- 
-  
 }
 
 #reset-button {
@@ -72,7 +69,6 @@ button {
   color: hsl(172, 67%, 45%);
 }
 
-
 #tip-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -85,7 +81,7 @@ button {
 .tip-button {
   background-color: hsl(183, 100%, 15%);
   color: white;
-  font-family: Space Mono;
+  font-family: Space Mono, sans-serif;
   border: none;
   border-radius: 5px;
   font-size: 20px;
@@ -94,8 +90,8 @@ button {
 }
 
 .tip-button:hover {
-  background-color:  hsl(172, 67%, 45%);
-  color:hsl(183, 100%, 15%) ;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
 }
 
 #custom-button {
@@ -103,26 +99,24 @@ button {
   border: none;
   width: 100%;
   border-radius: 5px;
-  font-family: Space Mono;
-  text-align: right;
+  font-family: Space Mono, sans-serif;
   font-size: 20px;
   cursor: pointer;
   box-sizing: border-box;
   text-align: center;
-  
 }
 
 #custom-button::placeholder {
   color: hsl(184, 14%, 56%);
 }
 
-#custom-button:focus, #custom-button:hover {
+#custom-button:focus,
+#custom-button:hover {
   outline-color: hsl(172, 67%, 45%);
   outline-style: solid;
   outline-width: medium;
   border-radius: 5px;
   color: hsl(183, 100%, 15%);
-  
 }
 
 .description {
@@ -136,10 +130,11 @@ button {
 }
 
 .person-text {
-  color: hsl(186, 14%, 43%)
+  color: hsl(186, 14%, 43%);
 }
 
-#input-div1, #input-div2 {
+#input-div1,
+#input-div2 {
   position: relative;
 }
 
@@ -151,30 +146,32 @@ img {
   height: 20px;
 }
 
-
-#bill-input, #people-input {
+#bill-input,
+#people-input {
   border: none;
   text-align: right;
   background-color: hsl(189, 41%, 97%);
-  font-family: Space Mono;
+  font-family: Space Mono, sans-serif;
   font-size: 30px;
   color: hsl(185, 41%, 84%);
   width: calc(100% - 1em);
-  padding:4px 20px 0px;
+  padding: 4px 20px 0;
   cursor: pointer;
-  
 }
 
 #bill-input {
   margin-bottom: 30px;
 }
 
-#bill-input:focus, #people-input:focus, #bill-input:hover, #people-input:hover {
- outline-color: hsl(172, 67%, 45%);
- outline-style: solid;
- outline-width: medium;
- border-radius: 5px;
- color:hsl(183, 100%, 15%) ;
+#bill-input:focus,
+#people-input:focus,
+#bill-input:hover,
+#people-input:hover {
+  outline-color: hsl(172, 67%, 45%);
+  outline-style: solid;
+  outline-width: medium;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
 }
 
 ::placeholder {
@@ -185,18 +182,18 @@ img {
   -webkit-appearance: none;
 }
 
-
 #cantbe {
   display: flex;
   justify-content: space-between;
 }
 
-#cantbe-text1, #cantbe-text2 {
+#cantbe-text1,
+#cantbe-text2 {
   color: red;
   display: none;
 }
 
 .attribution {
   position: fixed;
-  bottom:0;
+  bottom: 0;
 }
