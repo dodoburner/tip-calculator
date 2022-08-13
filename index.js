@@ -42,13 +42,14 @@ tipPercent.forEach(percent => percent.addEventListener('click', e => {
   total= (bill.value / 100) * parseInt(percent.textContent);
   tip= Math.round((total / people.value)*100) / 100;
   
+  console.log(total, tip, percent)
   cantbeFunction()
-  console.log(percent, people.classList)
 }))
 
 reset.addEventListener('click', e => {
   tipAmount.textContent= '$0.00';
   personAmount.textContent= '$0.00';
+  customTip.value='';
   bill.value='';
   people.value='';
   cantbeText1.classList.add('display-none')
