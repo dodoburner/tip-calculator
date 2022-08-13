@@ -79,5 +79,10 @@ function some() {
 customTip.addEventListener('click', e => some());
 customTip.addEventListener('change', e => some());
 
+bill.addEventListener('input', () => {
+  bill.value = bill.value.replace(/[^0-9.]/g, '')
+})
 
-
+people.addEventListener('input', () => {
+  people.value = people.value.replace(/[^0-9.]/g, '')
+})
