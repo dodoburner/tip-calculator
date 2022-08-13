@@ -13,23 +13,19 @@ let total;
 let tip;
 
 function cantbeFunction() { 
-  if (people.value == 0 && bill.value == '' || people.value == 0 && bill.value == '') {
-  people.style.outline= 'medium solid red'
-  people.style.borderRadius= '5px'
-  bill.style.outline= 'medium solid red'
-  bill.style.borderRadius= '5px'
-  cantbeText1.style.display= 'block'
-  cantbeText2.style.display= 'block'
+  if (people.value == 0 && bill.value == '' || people.value == '' && bill.value == 0) {
+  people.classList.add('red')
+  bill.classList.add('red')
+  cantbeText1.classList.remove('display-none')
+  cantbeText2.classList.remove('display-none')  
 }
 else if (people.value == 0 || people.value == '') {
-  people.style.outline= 'medium solid red'
-  people.style.borderRadius= '5px'
-  cantbeText2.style.display= 'block'
+  people.classList.add('red')
+  cantbeText2.classList.add('display-none')
 } 
 else if (bill.value == 0 || bill.value == '') {
-  bill.style.outline= 'medium solid red'
-  bill.style.borderRadius= '5px'
-  cantbeText1.style.display= 'block'
+  bill.classList.add('red')
+  cantbeText1.classList.add('display-none')
 }
 else {
   tipAmount.textContent= '$' + tip;
@@ -38,15 +34,16 @@ else {
 }
 
 tipPercent.forEach(percent => percent.addEventListener('click', e => {
-  cantbeText1.style.display= 'none'
-  cantbeText2.style.display= 'none'
-  bill.style.outline='none';
-  people.style.outline='none';
+  cantbeText1.classList.add('display-none')
+  cantbeText2.classList.add('display-none')  
+  people.classList.remove('red')
+  bill.classList.remove('red')
  
   total= (bill.value / 100) * parseInt(percent.textContent);
   tip= Math.round((total / people.value)*100) / 100;
   
   cantbeFunction()
+  console.log(percent, people.classList)
 }))
 
 reset.addEventListener('click', e => {
@@ -54,19 +51,18 @@ reset.addEventListener('click', e => {
   personAmount.textContent= '$0.00';
   bill.value='';
   people.value='';
-  people.style.outline= 'none'
-  bill.style.outline= 'none'
-  customTip.value= ''
-  cantbeText1.style.display= 'none'
-  cantbeText2.style.display= 'none'
+  cantbeText1.classList.add('display-none')
+  cantbeText2.classList.add('display-none')  
+  people.classList.remove('red')
+  bill.classList.remove('red')
 })
 
 
 function some() {
-  cantbeText1.style.display= 'none'
-  cantbeText2.style.display= 'none'
-  bill.style.outline='none';
-  people.style.outline='none';
+  cantbeText1.classList.add('display-none')
+  cantbeText2.classList.add('display-none')  
+  people.classList.remove('red')
+  bill.classList.remove('red')
 
   total= (bill.value / 100) * parseInt(customTip.value);
   tip= Math.round((total / people.value)*100) / 100;

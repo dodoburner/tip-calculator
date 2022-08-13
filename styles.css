@@ -20,6 +20,15 @@ button {
   font-family: Space Mono, sans-serif;
 }
 
+.red {
+  outline: medium solid red;
+  border-radius: 5px;
+}
+
+.display-none {
+  display: none;
+}
+
 #splitter {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -190,7 +199,6 @@ img {
 #cantbe-text1,
 #cantbe-text2 {
   color: red;
-  display: none;
 }
 
 .attribution {

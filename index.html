@@ -28,12 +28,12 @@
         <p class="description">
           Bill 
         </p>
-        <p id="cantbe-text1">Can't be zero</p> 
+        <p class="display-none" id="cantbe-text1">Can't be zero</p> 
       </div>
       
         <div id="input-div1">
           <img src="images/icon-dollar.svg" alt="">
-          <input id="bill-input" type="number" placeholder="0">
+          <input id="bill-input" type="number" min="0" placeholder="0">
         </div>
        
       <p class="description">
@@ -46,19 +46,19 @@
         <button class="tip-button">15%</button>
         <button class="tip-button">20%</button>
         <button class="tip-button">50%</button>
-        <input type="number" placeholder="Custom" id="custom-button"  >
+        <input type="number" placeholder="Custom" min="0" id="custom-button" class="tip-button" >
       </div>
     
     <div class="text2" id="cantbe">
       <p class="description">
         Number of People
       </p>
-      <p id="cantbe-text2">Can't be zero</p>
+      <p class="display-none" id="cantbe-text2">Can't be zero</p>
     </div>
      
       <div id="input-div2">
         <img src="images/icon-person.svg" alt="">
-        <input type="number" id="people-input" placeholder="0">
+        <input type="number" id="people-input" min="1" placeholder="0">
         
       </div>
        
