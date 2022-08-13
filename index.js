@@ -42,7 +42,6 @@ tipPercent.forEach(percent => percent.addEventListener('click', e => {
   total= (bill.value / 100) * parseInt(percent.textContent);
   tip= Math.round((total / people.value)*100) / 100;
   
-  console.log(total, tip, percent)
   cantbeFunction()
 }))
 
@@ -58,13 +57,7 @@ reset.addEventListener('click', e => {
   bill.classList.remove('red')
 })
 
-
-function some() {
-  cantbeText1.classList.add('display-none')
-  cantbeText2.classList.add('display-none')  
-  people.classList.remove('red')
-  bill.classList.remove('red')
-
+customTip.addEventListener('input', () => {
   total= (bill.value / 100) * parseInt(customTip.value);
   tip= Math.round((total / people.value)*100) / 100;
 
@@ -74,10 +67,7 @@ function some() {
   else {
     cantbeFunction()
   }
-}
-
-customTip.addEventListener('click', e => some());
-customTip.addEventListener('change', e => some());
+});
 
 bill.addEventListener('input', () => {
   bill.value = bill.value.replace(/[^0-9.]/g, '')
