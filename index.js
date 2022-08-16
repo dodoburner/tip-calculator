@@ -11,9 +11,10 @@ let total;
 let tip;
 
 function cantbeFunction() {
-  if (
-    (people.value === 0 && bill.value === '')
+  if (people.value === 0 && bill.value === ''
     || (people.value === '' && bill.value === 0)
+    || (people.value === '' && bill.value === '')
+    || (people.value === 0 && bill.value === 0)
   ) {
     people.classList.add('red');
     bill.classList.add('red');
@@ -21,10 +22,10 @@ function cantbeFunction() {
     cantbeText2.classList.remove('display-none');
   } else if (people.value === 0 || people.value === '') {
     people.classList.add('red');
-    cantbeText2.classList.add('display-none');
+    cantbeText2.classList.remove('display-none');
   } else if (bill.value === 0 || bill.value === '') {
     bill.classList.add('red');
-    cantbeText1.classList.add('display-none');
+    cantbeText1.classList.remove('display-none');
   } else {
     tipAmount.textContent = `$${tip}`;
     personAmount.textContent = `$${Math.round((bill.value / people.value + tip) * 100) / 100}`;
