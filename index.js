@@ -56,13 +56,21 @@ reset.addEventListener('click', () => {
   bill.classList.remove('red');
 });
 
-customTip.addEventListener('input', () => {
+function customTipCalc() {
   total = (bill.value / 100) * parseInt(customTip.value, 10);
   tip = Math.round((total / people.value) * 100) / 100;
 
   if (customTip.value !== 0 || customTip.value !== undefined) {
     cantbeFunction();
   }
+}
+
+customTip.addEventListener('input', () => {
+  customTipCalc()
+});
+
+customTip.addEventListener('click', () => {
+  customTipCalc()
 });
 
 bill.addEventListener('input', () => {
